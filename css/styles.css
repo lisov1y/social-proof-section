@@ -1,0 +1,197 @@
+:root {
+  /* Primary */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* Mobile Version */
+
+
+.container {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+/* Top Text */
+
+h1 {
+  padding: 40px 30px 20px;
+  color: var(--very-dark-magenta);
+}
+
+.description {
+  padding: 0 15px 20px;
+  line-height: 1.7;
+  color: var(--dark-grayish-magenta);
+}
+
+/* Star Ratings */
+
+.rating-card {
+  background-color: var(--light-grayish-magenta);
+  margin: 10px 15px;
+  border-radius: 10px;
+}
+
+.rating-card img {
+  padding: 15px 4px 10px;
+}
+
+.rating-card p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+/* Review Ratings */
+
+.review-card-container {
+  margin: 50px 0;
+}
+
+.review-card {
+  background-color: var(--very-dark-magenta);
+  margin: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.review-card img {
+  float: left;
+  border-radius: 100%;
+  width: 40px;
+  margin: 25px 0 0 30px;
+}
+
+.user-info {
+  padding: 27px 0 30px 90px;
+}
+
+.name {
+  padding-bottom: 3px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.verified {
+  color: var(--soft-pink);
+}
+
+.review-text {
+  padding: 0 45px 30px 30px;
+  line-height: 1.7;
+  color: var(--light-grayish-magenta);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+/* Desktop View */
+
+@media screen and (min-width: 786px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+  }
+
+  .container>div {
+    flex: 1;
+    flex-basis: 40%;
+  }
+
+  /* Top-Left Text */
+
+  .top-text {
+    text-align: left;
+  }
+
+  h1 {
+    padding: 0 200px 15px 0;
+    font-size: 2.7rem;
+  }
+
+  .description {
+    padding: 0;
+    padding-right: 200px;
+  }
+
+  /* Right Side Star Reviews */
+
+  .rating-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .rating-card-container .rating-card:nth-of-type(2) {
+    align-self: center;
+  }
+
+  .rating-card-container .rating-card:nth-of-type(3) {
+    align-self: flex-end;
+  }
+
+  .rating-card {
+    text-align: left;
+    width: 70%;
+    margin: 15px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .rating-card img {
+    padding: 0 3px;
+  }
+
+  .rating-card p {
+    display: inline-block;
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  /* Bottom Reviews */
+  .review-card-container {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .review-card-container .review-card:nth-of-type(2) {
+    align-self: center;
+  }
+
+  .review-card-container .review-card:nth-of-type(3) {
+    align-self: flex-end;
+  }
+
+  .review-card {
+    margin: 0 15px;
+    width: 30%;
+  }
+}
+
+  @media screen and (min-width: 1000px) {
+    .container {
+      margin: 100px;
+    }
